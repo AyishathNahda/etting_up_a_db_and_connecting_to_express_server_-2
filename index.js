@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
   res.sendFile(resolve(__dirname, 'pages/index.html'));
 });
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URI)
    .then(()=>console.log( `Connected to database`))
    .catch((err)=>console.log(`Error connecting to database`,err));
 
